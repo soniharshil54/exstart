@@ -32,6 +32,10 @@ app.get("/get",(req,res,next) => {
 		 .then(result=>res.json(result))
 		 .catch(err=>res.json(err))
 
+    Users.countDocuments()	
+    	  .then(result=>console.log(result))
+    	  .catch(result=>console.log(err))	 
+
 })
 
 app.get("/getone/:id", (req,res) => {
